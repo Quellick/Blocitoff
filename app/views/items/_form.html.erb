@@ -1,5 +1,5 @@
 <% if current_user %>
-  <%= form_for [item], url: user_item_index_path(@user) do |f| %>
+  <%= form_for [item], url: user_items_path(@user) do |f| %>
     <div class="form-group">
       <%= f.text_field :name, autofocus: true %>
     </div>
