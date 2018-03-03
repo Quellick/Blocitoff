@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  
   def create
     @user = current_user
     @item = @user.items.new(items_params)
@@ -19,11 +20,11 @@ class ItemsController < ApplicationController
   #   redirect_to current_user
   # end
   
-  if @item.destroy
-    flash[:notice] = "Item completed and removed successfully."
-  else
-    flash[:error] = "There was an error removing the item. Please try again."
-  end
+  # if @item.destroy
+  #   flash[:notice] = "Item completed and removed successfully."
+  # else
+  #   flash[:error] = "There was an error removing the item. Please try again."
+  # end
   
   private
   
