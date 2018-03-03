@@ -1,5 +1,6 @@
 <%= content_tag :div, class: 'media', id: "item-#{item.id}" do %>
   <%= link_to "", user_items_path(user_id: item.user.id, id: item.id), method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+  <!--<%= link_to "", @item, method: :delete, class: 'glyphicon glyphicon-ok' %>-->
   <%= distance_of_time_in_words(item.created_at, Time.now)  %>
   <%= "since item was created" %>
   <%= item.name %>
